@@ -1,32 +1,38 @@
 = seven_segment_display
 
-* http://github.com/#{github_username}/#{project_name}
+http://github.com/davidcole/seven_segment_display
 
 == DESCRIPTION:
 
-FIX (describe your package)
+Converts numbers to seven segment display digits, as in a digital clock, by adding a monkeypatch Integer.
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+Stay tuned.
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+require 'lib/seven_segment_display'
+
+<tt>
+0.upto( 100 ) do | x |
+  puts x.seven_segment
+end
+</tt>
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+Ruby.
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+<tt>sudo gem install seven_segment_display</tt>
 
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2010 FIXME full name
+Copyright (c) 2010 David Cole
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
