@@ -9,6 +9,6 @@ class TestSevenSegmentDisplay < Test::Unit::TestCase
   end
   
   def test_truth
-    convert_to_seven_segments( 1029384756, 2 )
+    puts seven_segment( 1029384756 )
   end
 end
