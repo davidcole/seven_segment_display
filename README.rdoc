@@ -14,11 +14,11 @@ Stay tuned.
 
 require 'lib/seven_segment_display'
 
-<tt>
+[code lang="ruby"]
 0.upto( 100 ) do | x |
   puts x.seven_segment
 end
-</tt>
+[/code]
 
 == REQUIREMENTS:
 
@@ -26,7 +26,9 @@ Ruby.
 
 == INSTALL:
 
-<tt>sudo gem install seven_segment_display</tt>
+[code lang="ruby"]
+sudo gem install seven_segment_display
+[/code]
 
 == LICENSE:
 
