@@ -84,17 +84,29 @@ module SevenSegmentDisplay
   }
 
   seven_segment_block = lambda { | *args |
+    size = args[0] ||= 1
+    raise ArgumentError.new( 'Size cannot be less than one.' ) if size < 1
     number_count = self.to_s.length
     digits = self.to_s.split( // )
     display = ''
-    0.upto( 4 ) do | line |
+     
+    make_line = lambda { | line_number |
+      line = ''
       0.upto( number_count - 1 ) do | digit_index |
         number_layout = number_layouts[ digits[ digit_index ].to_i ]
-        display << number_layout[ line ].join
+        line << "#{ number_layout[ line_number ][ 0 ] }#{ number_layout[ line_number ][ 1 ] * size }#{ number_layout[ line_number ][ 2 ] }"
       end
-      display << "\n"
+      line + "\n"
+    }
+    
+    0.upto( 4 ) do | line_number |
+      if line_number.odd?
+        display << make_line.call( line_number ) * size 
+      else
+        display << make_line.call( line_number )
+      end
     end
-    display
+    display    
   }
 
   Integer.send( :define_method, 'seven_segment', seven_segment_block )
