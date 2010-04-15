@@ -12,7 +12,8 @@ Stay tuned.
 
 == SYNOPSIS:
 
-  require 'lib/seven_segment_display'
+  require 'rubygems'
+  require 'seven_segment_display'
 
   puts 0.seven_segment
   puts 42.seven_segment
