@@ -11,81 +11,89 @@ module SevenSegmentDisplay
   BOTTOM = 4
 
   number_layouts = {
-    0 => {
+    '0' => {
       TOP         => [ ' ', '—', ' ' ],
       TOP_BODY    => [ '|', ' ', '|' ],
       MIDDLE      => [ ' ', ' ', ' ' ],
       BOTTOM_BODY => [ '|', ' ', '|' ],
       BOTTOM      => [ ' ', '—', ' ' ]
     },
-    1 => {
+    '1' => {
       TOP         => [ ' ', ' ', ' ' ],
       TOP_BODY    => [ ' ', ' ', '|' ],
       MIDDLE      => [ ' ', ' ', ' ' ],
       BOTTOM_BODY => [ ' ', ' ', '|' ],
       BOTTOM      => [ ' ', ' ', ' ' ]
     },
-    2 => {
+    '2' => {
       TOP         => [ ' ', '—', ' ' ],
       TOP_BODY    => [ ' ', ' ', '|' ],
       MIDDLE      => [ ' ', '—', ' ' ],
       BOTTOM_BODY => [ '|', ' ', ' ' ],
       BOTTOM      => [ ' ', '—', ' ' ]
     },
-    3 => {
+    '3' => {
       TOP         => [ ' ', '—', ' ' ],
       TOP_BODY    => [ ' ', ' ', '|' ],
       MIDDLE      => [ ' ', '—', ' ' ],
       BOTTOM_BODY => [ ' ', ' ', '|' ],
       BOTTOM      => [ ' ', '—', ' ' ]
     },
-    4 => {
+    '4' => {
       TOP         => [ ' ', ' ', ' ' ],
       TOP_BODY    => [ '|', ' ', '|' ],
       MIDDLE      => [ ' ', '—', ' ' ],
       BOTTOM_BODY => [ ' ', ' ', '|' ],
       BOTTOM      => [ ' ', ' ', ' ' ]
     },
-    5 => {
+    '5' => {
       TOP         => [ ' ', '—', ' ' ],
       TOP_BODY    => [ '|', ' ', ' ' ],
       MIDDLE      => [ ' ', '—', ' ' ],
       BOTTOM_BODY => [ ' ', ' ', '|' ],
       BOTTOM      => [ ' ', '—', ' ' ]
     },
-    6 => {
+    '6' => {
       TOP         => [ ' ', '—', ' ' ],
       TOP_BODY    => [ '|', ' ', ' ' ],
       MIDDLE      => [ ' ', '—', ' ' ],
       BOTTOM_BODY => [ '|', ' ', '|' ],
       BOTTOM      => [ ' ', '—', ' ' ]
     },
-    7 => {
+    '7' => {
       TOP         => [ ' ', '—', ' ' ],
       TOP_BODY    => [ ' ', ' ', '|' ],
       MIDDLE      => [ ' ', ' ', ' ' ],
       BOTTOM_BODY => [ ' ', ' ', '|' ],
       BOTTOM      => [ ' ', ' ', ' ' ]
     },
-    8 => {
+    '8' => {
       TOP         => [ ' ', '—', ' ' ],
       TOP_BODY    => [ '|', ' ', '|' ],
       MIDDLE      => [ ' ', '—', ' ' ],
       BOTTOM_BODY => [ '|', ' ', '|' ],
       BOTTOM      => [ ' ', '—', ' ' ]
     },
-    9 => {
+    '9' => {
       TOP         => [ ' ', '—', ' ' ],
       TOP_BODY    => [ '|', ' ', '|' ],
       MIDDLE      => [ ' ', '—', ' ' ],
       BOTTOM_BODY => [ ' ', ' ', '|' ],
       BOTTOM      => [ ' ', '—', ' ' ]
+    },
+    '-' => {
+      TOP         => [ ' ', ' ', ' ' ],
+      TOP_BODY    => [ ' ', ' ', ' ' ],
+      MIDDLE      => [ ' ', '—', ' ' ],
+      BOTTOM_BODY => [ ' ', ' ', ' ' ],
+      BOTTOM      => [ ' ', ' ', ' ' ]
     }
   }
 
   seven_segment_block = lambda { | *args |
     size = args[0] ||= 1
     raise ArgumentError.new( 'Size cannot be less than one.' ) if size < 1
+    puts self.to_s
     number_count = self.to_s.length
     digits = self.to_s.split( // )
     display = ''
@@ -93,7 +101,7 @@ module SevenSegmentDisplay
     make_line = lambda { | line_number |
       line = ''
       0.upto( number_count - 1 ) do | digit_index |
-        number_layout = number_layouts[ digits[ digit_index ].to_i ]
+        number_layout = number_layouts[ digits[ digit_index ] ]
         line << "#{ number_layout[ line_number ][ 0 ] }#{ number_layout[ line_number ][ 1 ] * size }#{ number_layout[ line_number ][ 2 ] }"
       end
       line + "\n"
