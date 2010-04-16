@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>test_display (TestSevenSegmentDisplay)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File test/test_seven_segment_display.rb, line 70</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_display</span>
+    <span class="ruby-identifier">assert_equal</span>( <span class="ruby-ivar">@all_digits</span>, <span class="ruby-value">1234567890</span>.<span class="ruby-identifier">seven_segment</span> )
+    <span class="ruby-identifier">assert_equal</span>( <span class="ruby-ivar">@all_digits_backwards</span>, <span class="ruby-value">9876543210</span>.<span class="ruby-identifier">seven_segment</span> )
+    <span class="ruby-identifier">assert_equal</span>( <span class="ruby-ivar">@all_digits_2</span>, <span class="ruby-value">1234567890</span>.<span class="ruby-identifier">seven_segment</span>( <span class="ruby-value">2</span> ) )
+    <span class="ruby-identifier">assert_equal</span>( <span class="ruby-ivar">@all_digits_5</span>, <span class="ruby-value">1234567890</span>.<span class="ruby-identifier">seven_segment</span>( <span class="ruby-value">5</span> ) )
+    <span class="ruby-identifier">assert_equal</span>( <span class="ruby-ivar">@all_digits_negative</span>, <span class="ruby-value">-123</span>.<span class="ruby-identifier">seven_segment</span> )
+    <span class="ruby-identifier">assert_equal</span>( <span class="ruby-ivar">@all_digits_negative_2</span>, <span class="ruby-value">-123</span>.<span class="ruby-identifier">seven_segment</span>( <span class="ruby-value">2</span> ) )
+    <span class="ruby-identifier">assert_raise</span>( <span class="ruby-constant">ArgumentError</span> ) { <span class="ruby-value">1234567890</span>.<span class="ruby-identifier">seven_segment</span>( <span class="ruby-value">0</span> ) }
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>
