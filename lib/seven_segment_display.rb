@@ -93,7 +93,6 @@ module SevenSegmentDisplay
   seven_segment_block = lambda { | *args |
     size = args[0] ||= 1
     raise ArgumentError.new( 'Size cannot be less than one.' ) if size < 1
-    puts self.to_s
     number_count = self.to_s.length
     digits = self.to_s.split( // )
     display = ''
