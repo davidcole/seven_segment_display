@@ -2,12 +2,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{seven_segment_display}
-  s.version = "0.0.4"
+  s.version = SevenSegmentDisplay::VERSION
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Cole"]
-  s.date = %q{2010-04-15}
+  s.date = %q{2010-04-16}
   s.description = %q{Converts numbers to seven segment display digits, as in a digital clock, by adding a monkeypatch to Integer.}
+  s.has_rdoc = true
   s.email = ["davidcole@davidcole.net"]
   s.extra_rdoc_files = ["History.txt", "Manifest.txt", "PostInstall.txt"]
   s.files = ["demo.rb", "History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "lib/seven_segment_display.rb", "test/test_helper.rb", "test/test_seven_segment_display.rb"]
