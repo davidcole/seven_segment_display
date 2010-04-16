@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Cole"]
   s.date = %q{2010-04-15}
-  s.description = %q{Converts numbers to seven segment display digits, as in a digital clock, by adding a monkeypatch Integer.}
+  s.description = %q{Converts numbers to seven segment display digits, as in a digital clock.}
   s.email = ["davidcole@davidcole.net"]
   s.extra_rdoc_files = ["History.txt", "Manifest.txt", "PostInstall.txt"]
   s.files = ["demo.rb", "History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "lib/seven_segment_display.rb", "test/test_helper.rb", "test/test_seven_segment_display.rb"]
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{seven-segment}
   s.rubygems_version = %q{1.3.6}
-  s.summary = %q{Converts numbers to seven segment display digits, as in a digital clock, by adding a monkeypatch Integer.}
+  s.summary = %q{Converts numbers to seven segment display digits, as in a digital clock, by adding a monkeypatch to Integer.}
   s.test_files = ["test/test_helper.rb", "test/test_seven_segment_display.rb"]
 
   if s.respond_to? :specification_version then
