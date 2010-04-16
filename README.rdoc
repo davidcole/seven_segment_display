@@ -4,11 +4,11 @@ http://github.com/davidcole/seven_segment_display
 
 == DESCRIPTION:
 
-Converts numbers to seven segment display digits, as in a digital clock, by adding a monkeypatch Integer.
+Converts numbers to seven segment display digits, as in a digital clock, by adding a monkeypatch to Integer.
 
 == FEATURES/PROBLEMS:
 
-Stay tuned.
+Only positive integers at this time.
 
 == SYNOPSIS:
 
