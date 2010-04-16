@@ -8,7 +8,7 @@ Converts numbers to seven segment display digits, as in a digital clock, by addi
 
 == FEATURES/PROBLEMS:
 
-Only positive integers at this time.
+Positive and negative integers.
 
 == SYNOPSIS:
 
