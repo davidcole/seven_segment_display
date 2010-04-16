@@ -2,3 +2,8 @@
 
 * 1 major enhancement:
   * Initial release
+  
+=== 0.0.4 2010-04-14
+
+* 1 major enhancement:
+  * Now supports negative and positive integers
