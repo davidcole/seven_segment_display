@@ -2,6 +2,11 @@
 
 * 1 major enhancement:
   * Initial release
+
+=== 0.0.3 2010-04-14
+
+* 1 major enhancement:
+  * Ability to specify size of digits
   
 === 0.0.4 2010-04-14
 
