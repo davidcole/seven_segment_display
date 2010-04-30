@@ -107,7 +107,7 @@ module SevenSegmentDisplay
     }
     
     0.upto( 4 ) do | line_number |
-      if line_number.odd?
+      if line_number % 2 == 1
         display << make_line.call( line_number ) * size 
       else
         display << make_line.call( line_number )
